@@ -1,0 +1,15 @@
+{
+  "name": "weapp-mpvue-flexbox-grid",
+  "version": "0.0.1",
+  "description": "Flexbox grid component for weapp",
+  "homepage": "https://github.com/afeiship/weapp-mpvue-flexbox-grid",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "main": "src/main.js",
+  "license": "MIT",
+  "dependencies": {
+    "weapp-sass-flexbox-grid": "github:afeiship/weapp-sass-flexbox-grid"
+  }
+}
