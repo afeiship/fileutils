@@ -10,8 +10,8 @@
 
 + js
 ```js
-import MpRow from 'weapp-mpvue-flexbox-grid/dist/row.vue';
-import MpCol from 'weapp-mpvue-flexbox-grid/dist/col.vue';
+import MpRow from 'weapp-mpvue-flexbox-grid/dist/mp-row.vue';
+import MpCol from 'weapp-mpvue-flexbox-grid/dist/mp-col.vue';
 ```
 
 
