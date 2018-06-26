@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     wrapClass() {
-      return this.wrap ? "row-wrap" : "row-nowrap";
+      return this.wrap ? 'row-wrap' : 'row-nowrap';
     },
     directionClass(){
       return this.direction ? 'box-vertical': 'box-horizontal';
