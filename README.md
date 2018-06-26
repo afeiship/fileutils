@@ -10,27 +10,27 @@
 
 + js
 ```js
-import Row from 'weapp-mpvue-flexbox-grid/dist/row.vue';
-import Col from 'weapp-mpvue-flexbox-grid/dist/col.vue';
+import MpRow from 'weapp-mpvue-flexbox-grid/dist/row.vue';
+import MpCol from 'weapp-mpvue-flexbox-grid/dist/col.vue';
 ```
 
 
 ## usage:
 + eq-width:
 ```html
-<row>
-  <col>Col1</col>
-  <col>Col2</col>
-  <col>Col3</col>
-</row>
+<mp-row>
+  <mp-col>mp-col1</mp-col>
+  <mp-col>mp-col2</mp-col>
+  <mp-col>mp-col3</mp-col>
+</mp-row>
 ```
 
-+ col with span
++ mp-col with span
 ```html
 <row>
-  <col span="2">Col1</col>
-  <col span="20">Col2</col>
-  <col span="2">Col3</col>
+  <mp-col span="2">mp-col1</mp-col>
+  <mp-col span="20">mp-col2</mp-col>
+  <mp-col span="2">mp-col3</mp-col>
 </row>
 ```html
 
