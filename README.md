@@ -43,7 +43,7 @@ import MpCol from 'weapp-mpvue-flexbox-grid/dist/mp-col.vue';
 | Name      | type    | Default | Value                                   | Description         |
 |-----------|---------|---------|-----------------------------------------|---------------------|
 | wrap      | Boolean | false   | true/false                              | wrap/nowrap         |
-| direction | Boolean | -       | true/false                              | horizontal/vertical |
+| direction | Boolean | false   | true/false                              | horizontal/vertical |
 | align     | String  | ''      | top/bottom/cener/stretch/baseline       | row align           |
 | justify   | String  | ''      | start/end/center/stretch/between/around | row jusitfy         |
 | className | String  | ''      | -                                       | css class name      |
