@@ -11,7 +11,7 @@
     "build": "gulp"
   },
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "weapp-sass-flexbox-grid": "github:afeiship/weapp-sass-flexbox-grid"
   },
   "devDependencies": {
