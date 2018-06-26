@@ -26,11 +26,13 @@ import Col from 'weapp-mpvue-flexbox-grid/dist/col.vue';
 ```
 
 + col with span
+```html
 <row>
   <col span="2">Col1</col>
   <col span="20">Col2</col>
   <col span="2">Col3</col>
 </row>
+```html
 
 
 ## Row properties:
