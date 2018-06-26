@@ -31,10 +31,10 @@ export default {
       return this.direction ? 'box-vertical': 'box-horizontal';
     },
     alignClass() {
-      return this.align ? `row-justify-${this.align}` : null;
+      return this.align ? `row-${this.align}` : null;
     },
     justifyClass() {
-      return this.justify ? `justify-${this.justify}` : null;
+      return this.align ? `row-justify-${this.align}` : null;
     }
   }
 };
