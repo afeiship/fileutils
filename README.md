@@ -27,12 +27,12 @@ import MpCol from 'weapp-mpvue-flexbox-grid/dist/col.vue';
 
 + mp-col with span
 ```html
-<row>
+<mp-row>
   <mp-col span="2">mp-col1</mp-col>
   <mp-col span="20">mp-col2</mp-col>
   <mp-col span="2">mp-col3</mp-col>
-</row>
-```html
+</mp-row>
+```
 
 
 ## Row properties:
