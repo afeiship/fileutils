@@ -1,6 +1,10 @@
 # weapp-mpvue-flexbox-grid
 > Flexbox grid component for weapp
 
+## todos:
++ [ ] 嵌套组件有坑(https://github.com/Meituan-Dianping/mpvue/issues/585)
+
+
 ## install:
 ```shell
 npm install afeiship/weapp-mpvue-flexbox-grid -S --registry=https://registry.npm.taobao.org
