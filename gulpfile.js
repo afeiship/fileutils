@@ -1,18 +1,9 @@
-(function () {
+const gulp = require('gulp');
+const { CleanRegistry, TsScripts } = require('@jswork/gulp-registry');
 
-  'use strict';
+const task1 = new CleanRegistry();
+const task2 = new TsScripts();
 
-  var gulp = require('gulp');
-  var $ = require('gulp-load-plugins')({
-    pattern: ['gulp-*', 'gulp.*', 'del']
-  });
+[task1, task2].forEach(gulp.registry);
 
-
-
-  gulp.task('default', function () {
-    return gulp.src('src/**')
-      .pipe(gulp.dest('dist'));
-  });
-
-
-}());
+gulp.task('default', gulp.series(['clean', 'ts:scripts']));

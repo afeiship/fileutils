@@ -1,62 +1,34 @@
-# weapp-mpvue-flexbox-grid
-> Flexbox grid component for weapp
+# fileutils
+> File and directory utilities for node.js.
 
-## todos:
-+ [ ] 嵌套组件有坑(https://github.com/Meituan-Dianping/mpvue/issues/585)
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
-
-## install:
+## installation
 ```shell
-npm install afeiship/weapp-mpvue-flexbox-grid -S --registry=https://registry.npm.taobao.org
+npm install @jswork/fileutils
 ```
 
-## imports:
-+ scss
-```scss
-@import 'node_modules/weapp-sass-flexbox-grid/dist/weapp-sass-flexbox-grid.scss';
-```
-
-+ js
+## usage
 ```js
-import MpRow from 'weapp-mpvue-flexbox-grid/dist/mp-row.vue';
-import MpCol from 'weapp-mpvue-flexbox-grid/dist/mp-col.vue';
+import fileutils from '@jswork/fileutils';
+
+// usage goes here.
 ```
 
+## license
+Code released under [the MIT license](https://github.com/afeiship/fileutils/blob/master/LICENSE.txt).
 
-## usage:
-+ eq-width:
-```html
-<mp-row>
-  <mp-col>mp-col1</mp-col>
-  <mp-col>mp-col2</mp-col>
-  <mp-col>mp-col3</mp-col>
-</mp-row>
-```
+[version-image]: https://img.shields.io/npm/v/@jswork/fileutils
+[version-url]: https://npmjs.org/package/@jswork/fileutils
 
-+ mp-col with span
-```html
-<mp-row>
-  <mp-col span="2">mp-col1</mp-col>
-  <mp-col span="20">mp-col2</mp-col>
-  <mp-col span="2">mp-col3</mp-col>
-</mp-row>
-```
+[license-image]: https://img.shields.io/npm/l/@jswork/fileutils
+[license-url]: https://github.com/afeiship/fileutils/blob/master/LICENSE.txt
 
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/fileutils
+[size-url]: https://github.com/afeiship/fileutils/blob/master/dist/fileutils.min.js
 
-## Row properties:
-| Name      | type    | Default | Value                                   | Description         |
-|-----------|---------|---------|-----------------------------------------|---------------------|
-| wrap      | Boolean | false   | true/false                              | wrap/nowrap         |
-| direction | Boolean | false   | true/false                              | horizontal/vertical |
-| align     | String  | ''      | top/bottom/cener/stretch/baseline       | row align           |
-| justify   | String  | ''      | start/end/center/stretch/between/around | row jusitfy         |
-| className | String  | ''      | -                                       | css class name      |
-
-
-## Col properties:
-| Name      | type   | Default | Value                    | Description    |
-|-----------|--------|---------|--------------------------|----------------|
-| align     | String | ''      | top/bottom/cener/stretch | col self align |
-| span      | String | 1-24    | -                        | col span size  |
-| offset    | String | 1-24    | -                        | row ofset      |
-| className | String | ''      | -                        | css class name |
+[download-image]: https://img.shields.io/npm/dm/@jswork/fileutils
+[download-url]: https://www.npmjs.com/package/@jswork/fileutils
