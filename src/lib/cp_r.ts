@@ -1,8 +1,8 @@
 import fs from 'fs';
-import fg from 'fast-glob';
 import path from 'path';
 import mkdir_p from './mkdir_p';
 import rm_rf from './rm_rf';
+import ls from './ls';
 
 type CpROptions = {
   forceClean?: boolean;
@@ -22,11 +22,7 @@ const cp_r = (src: string, dest: string, options?: CpROptions) => {
   }
 
   if (stat.isDirectory()) {
-    const files = fg.sync(['**/*'], {
-      cwd: src,
-      dot: true,
-      onlyFiles: true,
-    });
+    const files = ls(src);
 
     files.forEach((file) => {
       const srcFile = path.join(src, file);
