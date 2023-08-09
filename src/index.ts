@@ -1,4 +1,5 @@
 import cp_r from './lib/cp_r';
+import ls from './lib/ls';
 import mkdir_p from './lib/mkdir_p';
 import mv from './lib/mv';
 import pwd from './lib/pwd';
@@ -10,6 +11,7 @@ declare var wx: any;
 
 const Fileutils = {
   cp_r,
+  ls,
   mkdir_p,
   mv,
   pwd,
