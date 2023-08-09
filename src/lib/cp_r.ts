@@ -2,11 +2,17 @@ import fs from 'fs';
 import fg from 'fast-glob';
 import path from 'path';
 import mkdir_p from './mkdir_p';
+import rm_rf from './rm_rf';
 
-const cp_r = (src: string, dest: string) => {
+type CpROptions = {
+  forceClean?: boolean;
+};
+
+const cp_r = (src: string, dest: string, options?: CpROptions) => {
   if (!src || !dest) throw new Error('src or dest is empty');
 
-  // src -> file/dir
+  if (options?.forceClean) rm_rf(dest);
+
   const stat = fs.statSync(src);
 
   if (stat.isFile()) {
