@@ -1,15 +1,19 @@
-import mkdirp from './lib/mkdirp';
-import rmdir from './lib/rmdir';
-import mv from './lib/mv'
+import mkdir_p from './lib/mkdir_p';
+import mv from './lib/mv';
+import rm_rf from './lib/rm_rf';
+import cp_r from './lib/cp_r';
+import cp from './lib/cp';
 
 // https://cloud.tencent.com/developer/section/1377051
 
 declare var wx: any;
 
 const Fileutils = {
-  mkdirp,
-  rmdir,
-  mv
+  mkdir_p,
+  rm_rf,
+  mv,
+  cp_r,
+  cp,
 };
 
 // for commonjs es5 require
