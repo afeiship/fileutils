@@ -1,28 +1,35 @@
 import fs from 'fs';
+import fg from 'fast-glob';
 import path from 'path';
+import mkdir_p from './mkdir_p';
 
 const cp_r = (src: string, dest: string) => {
   if (!src || !dest) throw new Error('src or dest is empty');
 
-  const cpr = (srcPath, destPath) => {
-    const stats = fs.statSync(srcPath);
-    if (stats.isDirectory()) {
-      if (!fs.existsSync(destPath)) {
-        fs.mkdirSync(destPath);
-      }
+  // src -> file/dir
+  const stat = fs.statSync(src);
 
-      const files = fs.readdirSync(srcPath);
-      files.forEach((file) => {
-        const srcFile = path.join(srcPath, file);
-        const destFile = path.join(destPath, file);
-        cpr(srcFile, destFile);
-      });
-    } else if (stats.isFile()) {
-      fs.copyFileSync(srcPath, destPath);
-    }
-  };
+  if (stat.isFile()) {
+    mkdir_p(dest);
+    const destFile = path.join(dest, path.basename(src));
+    return fs.copyFileSync(src, destFile);
+  }
 
-  cpr(src, dest);
+  if (stat.isDirectory()) {
+    const files = fg.sync(['**/*'], {
+      cwd: src,
+      dot: true,
+      onlyFiles: true,
+    });
+
+    files.forEach((file) => {
+      const srcFile = path.join(src, file);
+      const destFile = path.join(dest, file);
+      const destDir = path.dirname(destFile);
+      mkdir_p(destDir);
+      fs.copyFileSync(srcFile, destFile);
+    });
+  }
 };
 
 export default cp_r;
