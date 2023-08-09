@@ -1,7 +1,15 @@
+import mkdirp from './lib/mkdirp';
+import rmdir from './lib/rmdir';
+import mv from './lib/mv'
+
+// https://cloud.tencent.com/developer/section/1377051
+
 declare var wx: any;
 
-const Fileutils = (): void => {
-  console.log('hello');
+const Fileutils = {
+  mkdirp,
+  rmdir,
+  mv
 };
 
 // for commonjs es5 require
