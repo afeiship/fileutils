@@ -28,8 +28,7 @@ const cp_r = (src: string, dest: string, options?: CpROptions) => {
       const srcFile = path.join(src, file);
       const destFile = path.join(dest, file);
       const destDir = path.dirname(destFile);
-      mkdir_p(destDir);
-      fs.copyFileSync(srcFile, destFile);
+      cp_r(srcFile, destDir);
     });
   }
 };
