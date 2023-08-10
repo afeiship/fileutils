@@ -14,4 +14,10 @@ describe('api.ls', () => {
     expect(files.includes('lib/.gitkeep')).toBe(true);
     expect(files.includes('lib')).toBe(true);
   });
+
+  test('ls with source', ()=>{
+    const files = fu.ls('src', { source: 'lib/*' });
+    expect(files.includes('index.ts')).toBe(false);
+    expect(files.includes('lib/.gitkeep')).toBe(true);
+  })
 });
