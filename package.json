@@ -1,6 +1,6 @@
 {
   "name": "@jswork/fileutils",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "File and directory utilities for node.js.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
